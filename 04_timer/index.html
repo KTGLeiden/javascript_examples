@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script>
+            // Set starting ypos
+            var ypos = 0;
+            var flying = false;
+            var timer; // interval reference
+
+            function fly() {
+                // Increment ypos
+                ypos = ypos + 1;
+
+                // Set fly position
+                document.getElementById('counter').style.top = ypos;
+            }
+
+            function toggleFly() {
+                if (timer) {
+                    clearInterval(timer);
+                    timer = undefined;
+                } else {
+                    timer = setInterval(fly, 10);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Hello world!</h1>
+        <button onclick="toggleFly()">Toggle fly!</button>
+        <span id="counter" style="position: relative">Fly!</span>
+    </body>
+</html>

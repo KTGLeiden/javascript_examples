@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script>
+            // Set counter
+            var count = 0;
+            function incrementCounter() {
+                // Increment count
+                count++;
+
+                // Set counter value
+                document.getElementById('counter').innerHTML = count;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Hello world!</h1>
+        <button onclick="incrementCounter()">click me!</button>
+        Times visited: <span id="counter"></span>
+    </body>
+</html>
