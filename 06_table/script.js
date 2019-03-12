@@ -71,3 +71,27 @@ const data = [
 ];
 
 // Fill table with data
+const table = document.getElementById('table');
+for (i = 0; i < data.length; i++) {
+    table.appendChild(createRow(data[i]));
+}
+
+// Create TR element
+function createRow(data) {
+    var row = document.createElement('TR');
+    row.appendChild(createCell(data.index));
+    row.appendChild(createCell(data.age));
+    row.appendChild(createCell(data.name));
+    row.appendChild(createCell(data.email));
+    row.appendChild(createCell(data.phone));
+    row.appendChild(createCell(data.address));
+    row.appendChild(createCell(data.registered));
+    return row;
+}
+
+// Create individual cell
+function createCell(text) {
+    var cell = document.createElement('TD');
+    cell.innerHTML = text;
+    return cell;
+}
